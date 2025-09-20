@@ -1,0 +1,343 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+include ../elements/_ui-parallax
+include ../elements/_ui-portfolio-item
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+	- var home_7 = true
+
+block page
+	header.page-header
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar(data-layout='rd-navbar-fixed'
+			data-sm-layout='rd-navbar-fixed'
+			data-sm-device-layout='rd-navbar-fixed'
+			data-md-layout='rd-navbar-static'
+			data-md-device-layout='rd-navbar-fixed'
+			data-lg-device-layout='rd-navbar-static'
+			data-lg-layout='rd-navbar-static'
+			data-xl-device-layout='rd-navbar-static'
+			data-xl-layout='rd-navbar-static'
+			data-xxl-device-layout='rd-navbar-static'
+			data-xxl-layout='rd-navbar-static'
+			data-stick-up-clone='false'
+			data-sm-stick-up='true'
+			data-md-stick-up='true'
+			data-lg-stick-up='true'
+			data-md-stick-up-offset='110px'
+			data-lg-stick-up-offset='1px')
+				.rd-navbar-inner.rd-navbar-search-wrap
+					// RD Navbar Panel
+					.rd-navbar-panel.rd-navbar-search-lg_collapsable
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+						// RD Navbar Brand
+						.rd-navbar-brand
+							a.brand-name(href='index.html')
+								+png(logoDefault)(srcset=logoDefaultRetina)
+
+					// RD Navbar Nav
+					.rd-navbar-nav-wrap
+						ul.rd-navbar-nav
+							li.active: a(href='#home') Home
+							li: a(href='#about') About
+							li: a(href='#projects') Projects
+							li: a(href='#services') Services
+							li: a(href='#pricing') Pricing
+							li: a(href='#testimonials') Testimonials
+							li: a(href='#news') News
+							li: a(href='#map') Location
+
+	// Swiper
+	section#home
+		.swiper-container.swiper-slider.swiper-slider_fullheight-var-1(data-simulate-touch="false", data-loop='true', data-autoplay='5000')
+			.swiper-wrapper
+				.swiper-slide.context-dark.swiper-slide-dark-overlay.swiper-slide-dark-overlay-35(data-slide-bg='images/slider-slide-corporate-1.jpg')
+					.swiper-slide-caption.text-center
+						.container
+							.row.justify-content-center
+								.col-lg-7
+									h2(data-caption-animate='fadeInUpSmall') Reliable Construction Services
+									h5.text-width-2.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Edifice creates and implements sustainable construction projects for you.
+									.group-lg.group-middle
+										a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#', data-custom-scroll-to=seeFeaturesLink) See Services
+										a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href="#", data-toggle="modal", data-target="#contact-modal" ) Contact Us
+
+				.swiper-slide.swiper-slide-dark-overlay.swiper-slide-dark-overlay-35(data-slide-bg='images/slider-slide-5-1920x1280.jpg')
+					.swiper-slide-caption.text-center.context-dark
+						.container
+							h1(data-caption-animate='fadeInUpSmall')
+								span Edifice
+							h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Experienced Construction Professionals
+							.group-lg.group-middle
+								a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#', data-custom-scroll-to=seeFeaturesLink) See Services
+								a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href="#", data-toggle="modal", data-target="#contact-modal") Contact Us
+
+				.swiper-slide.swiper-slide-dark-overlay.swiper-slide-dark-overlay-35(data-slide-bg='images/slider-slide-corporate.jpg')
+					.swiper-slide-caption.context-dark
+						.container
+							h2(data-caption-animate='fadeInLeftSmall')
+								| We can handle the most
+								br.d-none.d-lg-block
+								|  ambitious projects
+							a.button.button-primary(data-caption-animate='fadeInLeftSmall', data-caption-delay='200', href="#", data-toggle="modal", data-target="#contact-modal") Contact Us
+
+
+
+			// Swiper Pagination
+			.swiper-pagination
+
+			// Swiper Navigation
+			.swiper-button-prev.linear-icon-chevron-left
+			.swiper-button-next.linear-icon-chevron-right
+
+	='\n'
+
+	// About us
+	section.section-md.bg-default#about
+		.container
+			h4.heading-decorated.heading-decorated_center.text-center About us
+			.row.justify-content-md-center.justify-content-lg-between.row-50
+
+				.col-md-8.col-lg-5
+					p For over 30 years, commitment to our Core Values has made Edifice Construction Company the ideal building partner for the region’s most forward-thinking organizations. Our success comes from a steadfast commitment to the client’s vision and a culture of balance, integrity, leadership, and dedication to our customers.
+					.row.row-30
+						.col-xl-12
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-menu3
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Professional Approach
+									p Our approach to building sustainable facilities is based on high professionalism and delivering projects with fairness and excellence.
+
+						.col-xl-12
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-users2
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Expert team
+									p We employ the best experts in construction that make our every project a reliable one. You can trust each member of Edifice team.
+
+						.col-xl-12
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-pencil3
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Best solutions
+									p Our company offers top-notch construction solutions to corporate and individual clients worldwide, while also covering their needs.
+
+				.col-md-7.col-lg-6
+					figure
+						+jpg('home-variant-3-555x500')
+
+
+	// counters
+	+parallax({
+		src: 'images/parallax-1.jpg'
+	})
+		.container.section-md
+			.row.justify-content-md-center.row-50
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-city
+						.box-counter__wrap
+							.counter 100
+						p.box-counter__title Projects Annually
+
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-trophy
+						.box-counter__wrap
+							.counter 45
+						p.box-counter__title Awards
+
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-bubbles
+						.box-counter__wrap
+							.counter 98
+							span %
+						p.box-counter__title Positive Reviews
+
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-man-woman
+						.box-counter__wrap
+							.counter 147
+							span k
+						p.box-counter__title Happy Customers
+
+	// Our Projects
+	include ../sections/_section-portfolio-2
+
+	// Section Cta
+	include ../sections/_section-cta-1
+
+	// Services
+	include ../sections/_section-services
+
+	//Pricing
+	include ../sections/_section-pricing-table-2
+
+
+
+	+parallax({
+		src: 'images/construction-testimonials.jpg'
+	})
+		.container.section-lg.text-center#testimonials
+			h4.heading-decorated WHAT PEOPLE SAY
+			// Owl Carousel
+			.owl-carousel(data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true' data-nav='false')
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('deborah-quagmire-120x120')
+						.quote-default__text: p.q For 22 years, we have partnered with Edifice on a variety of projects, and each time they are completed on time and on budget. Our relationship is built on quality and trust. We recommend them for any job—big or small.
+						p.quote-default__cite Jane Smith
+
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('benedict-arnold-120x120')
+						.quote-default__text: p.q Our company needed to build a brand new 28,000 sf facility that would both meet our needs and comply with world standards. Edifice alleviated all of our concerns and communicated with us every step of the way.
+						p.quote-default__cite James Wilson
+
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('testimonials-3-120x120')
+						.quote-default__text: p.q Our business was expanding and needed additional manufacturing space. We went into this project knowing Edifice was up for the challenge. and shared our goals. The results exceeded our expectations, to say the least.
+						p.quote-default__cite Ann Williams
+
+
+
+	// Posts
+	section.section-md.bg-default#news
+		.container
+			.row: .col-sm-12.text-center: h4.heading-decorated Recent News 
+			.row.row-60
+				// Owl Carousel
+				.owl-carousel.owl-carousel-spacing-2(data-items='1',data-sm-items='2',data-xl-items='3', data-dots='true' data-nav='false' data-stage-padding='15', data-margin='30', data-mouse-drag="false", data-loop='false', data-autoplay='true')
+					.owl-item
+						// Post classic
+						article.post-classic.post-minimal
+							a(href=postImage).post-minimal-image: +jpg('post-construction-2-418x315')
+
+							.post-classic-title
+								h6: a(href=postImage) 667 Congress Street Project is Finished!
+
+							.post-meta
+								.group
+									a(href=postImage): time(datetime='2018') Jan.20, 2018
+									a(href=postImage).meta-author by Brian Williamson
+
+							.post-classic-body
+								p Today we commemorated the completion of steel erection at the 667 Congress Street Apartments project with a traditional topping out ceremony. Despite the dreary weather, spirits were high in Portland, Maine, as...
+					.owl-item
+						// Post classic
+						article.post-classic.post-minimal
+							a(href=postLink).post-minimal-image: +jpg('post-construction-1-418x315')
+
+							.post-classic-title
+								h6: a(href=postLink) Ribbon “Cut” to Open New Bus Center
+
+							.post-meta
+								.group
+									a(href=postLink): time(datetime='2018') Jan.20, 2018
+									a(href=postLink).meta-author by Brian Williamson
+
+							.post-classic-body
+								p Yesterday was a big day for the City of Burlington as a Green Mountain Transit bus literally drove through the ribbon to officially open the new Downtown Transit Center in Vermont. We have finally…
+					.owl-item
+						// Post classic
+						article.post-classic.post-minimal
+							a(href=postSlider).post-minimal-image: +jpg('post-construction-3-418x315')
+
+							.post-classic-title
+								h6: a(href=postSlider) New Doublered Residence Facility
+
+							.post-meta
+								.group
+									a(href=postSlider): time(datetime='2018') Jan.20, 2018
+									a(href=postSlider).meta-author by Brian Williamson
+
+							.post-classic-body
+								p Last month, our construction company turned over the 110,000-square-foot, 237-bed Fox Run at Fulton housing facility for occupancy. Located adjacent to Marist College, the facility is now home to 237...
+					.owl-item
+						// Post classic
+						article.post-classic.post-minimal
+							a(href=postImage).post-minimal-image: +jpg('post-construction-2-418x315')
+
+							.post-classic-title
+								h6: a(href=postImage) 667 Congress Street Project is Finished!
+
+							.post-meta
+								.group
+									a(href=postImage): time(datetime='2018') Jan.20, 2018
+									a(href=postImage).meta-author by Brian Williamson
+
+							.post-classic-body
+								p Today we commemorated the completion of steel erection at the 667 Congress Street Apartments project with a traditional topping out ceremony. Despite the dreary weather, spirits were high in Portland, Maine, as...
+					.owl-item
+						// Post classic
+						article.post-classic.post-minimal
+							a(href=postLink).post-minimal-image: +jpg('post-construction-1-418x315')
+
+							.post-classic-title
+								h6: a(href=postLink) Ribbon “Cut” to Open New Bus Center
+
+							.post-meta
+								.group
+									a(href=postLink): time(datetime='2018') Jan.20, 2018
+									a(href=postLink).meta-author by Brian Williamson
+
+							.post-classic-body
+								p Yesterday was a big day for the City of Burlington as a Green Mountain Transit bus literally drove through the ribbon to officially open the new Downtown Transit Center in Vermont. We have finally…
+					.owl-item
+						// Post classic
+						article.post-classic.post-minimal
+							a(href=postSlider).post-minimal-image: +jpg('post-construction-3-418x315')
+
+							.post-classic-title
+								h6: a(href=postSlider) New Doublered Residence Facility
+
+							.post-meta
+								.group
+									a(href=postSlider): time(datetime='2018') Jan.20, 2018
+									a(href=postSlider).meta-author by Brian Williamson
+
+							.post-classic-body
+								p Last month, our construction company turned over the 110,000-square-foot, 237-bed Fox Run at Fulton housing facility for occupancy. Located adjacent to Marist College, the facility is now home to 237...
+	='\n'
+
+	section#map
+		include ../sections/_section-gmap
+
+
+
+
+	// Page Footer
+	include ../sections/_footer-corporate-2
+
+
+
+	//Contact Modal
+	include ../sections/_modal-contact

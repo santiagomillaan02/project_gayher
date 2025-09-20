@@ -1,0 +1,85 @@
+include ../elements/_ui-portfolio-item
+
+section.section-md.bg-default.text-center#projects
+	h4.heading-decorated Our Projects
+	.container
+		.isotope-wrap.row.row-70
+			.col-sm-12(data-lightgallery='group')
+				.isotope.row(data-isotope-layout='fitRows', data-isotope-group='gallery')
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'project-1-1200x800',
+							img: 'project-1-1200x800',
+							icon_class1: 'linear-icon-picture',
+							items: ['Multifamily'],
+							title: 'White City Lofts',
+							desc: 'Professional construction services',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'project-2-1200x800',
+							img: 'project-2-1200x800',
+							icon_class1: 'linear-icon-picture',
+							items: ['Industrial'],
+							title: 'Metalworking Plant',
+							desc: 'Professional construction services',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'project-3-1200x800',
+							img: 'project-3-1200x800',
+							icon_class1: 'linear-icon-picture',
+							items: ['Residential'],
+							title: 'McMillan’s House',
+							desc: 'Professional construction services',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'project-4-1200x800',
+							img: 'project-4-1200x800',
+							icon_class1: 'linear-icon-picture',
+							items: ['Healthcare'],
+							title: 'Childcare Center',
+							desc: 'Professional construction services',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'project-5-1200x800',
+							img: 'project-5-1200x800',
+							icon_class1: 'linear-icon-picture',
+							items: ['Social'],
+							title: 'Social Housing',
+							desc: 'Professional construction services',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'project-6-1200x800',
+							img: 'project-6-1200x800',
+							icon_class1: 'linear-icon-picture',
+							items: ['Commercial'],
+							title: 'City Stadium',
+							desc: 'Professional construction services',
+							icon_class2: 'linear-icon-plus'
+						})

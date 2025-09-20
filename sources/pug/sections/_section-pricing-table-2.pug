@@ -1,0 +1,55 @@
+include ../elements/_ui-pricing-table
+	
+section.section-lg.bg-gray-lighter.text-center#pricing
+	.container
+		h4.heading-decorated Pricing
+		.row.row-50
+			.col-md-6.col-xl-3
+				+pricing-table({
+					title: 'Starter',
+					price: '$14.89'
+				})
+					ul.list
+						li
+							span Construction Planning
+						li Cost Containment
+						li General Contracting
+						li Phone Consultation
+
+			.col-md-6.col-xl-3
+				+pricing-table({
+					class: 'pricing-table-label',
+					label: 'most popular',
+					title: 'Standard',
+					price: '$32.89'
+				})
+					ul.list
+						li
+							span Pre-construction Services
+						li Construction Administration
+						li Virtual Design
+						li Project Management
+
+			.col-md-6.col-xl-3
+				+pricing-table({
+					title: 'Business',
+					price: '$76.89 '
+				})
+					ul.list
+						li
+							span Construction Services
+						li Self-perform
+						li Construction management
+						li Cost Estimation
+
+			.col-md-6.col-xl-3
+				+pricing-table({
+					title: 'Professional',
+					price: '$89.89'
+				})
+					ul.list
+						li
+							span Design-build
+						li Equipment Installation
+						li Quality Assurance
+						li Green Construction

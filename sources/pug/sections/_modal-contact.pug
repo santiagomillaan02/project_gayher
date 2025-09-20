@@ -1,0 +1,25 @@
+// Modal
+#contact-modal.modal.fade.contact-modal(tabindex='-1', role='dialog', aria-label='exampleModalCenterTitle', aria-hidden='true')
+	.modal-dialog.modal-dialog-centered.modal-dialog-custom
+		.modal-content
+			button.close(type='button', data-dismiss='modal', aria-label='Close')
+				span(aria-hidden='true') ×
+			.modal-header
+				h5.modal-title Get In Touch
+			.modal-dialog-inner
+				// RD Mailform
+				form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+					.form-wrap.form-wrap_icon.linear-icon-man
+						input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+						label.form-label(for="contact-name") Your name
+
+					.form-wrap.form-wrap_icon.linear-icon-envelope
+						input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+						label.form-label(for="contact-email") Your e-mail
+
+					.form-wrap.form-wrap_icon.linear-icon-feather
+						textarea#contact-message.form-input(name="message" data-constraints="@Required")
+						label.form-label(for="contact-message") Your message
+
+					button(type="submit").button.button-primary send
+
